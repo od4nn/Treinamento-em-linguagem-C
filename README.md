@@ -15,7 +15,7 @@ Estou usando o livro **"Treinamento em Linguagem C" (Segunda Edição)** como pr
 
 ## 🧪 Organização
 
-A pasta chamada "Praticando" é a pasta onde estou fazendo os exemplos dos livros, as vezes com variações.
+A pasta chamada "Praticando" é a pasta onde estou fazendo os exemplos do livros, as vezes com variações.
 
 - Arquivo `.c` com o código-fonte
 - Arquivo `.dev` com as configurações do projeto (caso queira abrir no Dev C++)
