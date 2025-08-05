@@ -1,0 +1,10 @@
+*.exe
+*.o
+*.obj
+*.layout
+*.res
+*.dep
+*.depend
+*.win
+*.ilk
+*.pdb
