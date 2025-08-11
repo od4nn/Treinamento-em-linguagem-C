@@ -1,9 +1,6 @@
 #include <stdio.h>
 #include <stdlib.h>
 
-/* Faça um programa que receba três notas, calcule e mostre a média aritmética entre
- elas.*/
- 
 int main() {
 	float n1,n2,n3;
 	float media;

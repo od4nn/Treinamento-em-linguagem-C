@@ -1,15 +1,15 @@
-# Project: media-ponderada
+# Project: triangulo
 # Makefile created by Dev-C++ 5.11
 
 CPP      = g++.exe
 CC       = gcc.exe
 WINDRES  = windres.exe
-OBJ      = media-ponderada.o
-LINKOBJ  = media-ponderada.o
+OBJ      = triangulo.o
+LINKOBJ  = triangulo.o
 LIBS     = -L"C:/Program Files (x86)/Dev-Cpp/MinGW64/lib" -L"C:/Program Files (x86)/Dev-Cpp/MinGW64/x86_64-w64-mingw32/lib" -static-libgcc
 INCS     = -I"C:/Program Files (x86)/Dev-Cpp/MinGW64/include" -I"C:/Program Files (x86)/Dev-Cpp/MinGW64/x86_64-w64-mingw32/include" -I"C:/Program Files (x86)/Dev-Cpp/MinGW64/lib/gcc/x86_64-w64-mingw32/4.9.2/include"
 CXXINCS  = -I"C:/Program Files (x86)/Dev-Cpp/MinGW64/include" -I"C:/Program Files (x86)/Dev-Cpp/MinGW64/x86_64-w64-mingw32/include" -I"C:/Program Files (x86)/Dev-Cpp/MinGW64/lib/gcc/x86_64-w64-mingw32/4.9.2/include" -I"C:/Program Files (x86)/Dev-Cpp/MinGW64/lib/gcc/x86_64-w64-mingw32/4.9.2/include/c++"
-BIN      = media-ponderada.exe
+BIN      = triangulo.exe
 CXXFLAGS = $(CXXINCS) -std=c99
 CFLAGS   = $(INCS) -std=c99
 RM       = rm.exe -f
@@ -24,5 +24,5 @@ clean: clean-custom
 $(BIN): $(OBJ)
 	$(CC) $(LINKOBJ) -o $(BIN) $(LIBS)
 
-media-ponderada.o: media-ponderada.c
-	$(CC) -c media-ponderada.c -o media-ponderada.o $(CFLAGS)
+triangulo.o: triangulo.c
+	$(CC) -c triangulo.c -o triangulo.o $(CFLAGS)
