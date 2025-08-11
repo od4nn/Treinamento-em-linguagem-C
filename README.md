@@ -16,6 +16,7 @@ Estou usando o livro **"Treinamento em Linguagem C" (Segunda Edição)** como pr
 ## 🧪 Organização
 
 A pasta chamada "Praticando" é a pasta onde estou fazendo os exemplos do livros, as vezes com variações.
+A pasta "Aulas-ucb" é referente ao conteudo passado pelo professor, seja exercicios ou conteudo passado na aula.
 
 - Arquivo `.c` com o código-fonte
 - Arquivo `.dev` com as configurações do projeto (caso queira abrir no Dev C++)
