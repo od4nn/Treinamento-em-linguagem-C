@@ -1,6 +1,6 @@
 [Project]
-FileName=numero-potencia.dev
-Name=numero-potencia
+FileName=potencia-numeros.dev
+Name=potencia-numeros
 Type=1
 Ver=2
 ObjFiles=
@@ -51,7 +51,7 @@ AutoIncBuildNr=0
 SyncProduct=1
 
 [Unit1]
-FileName=raiz-quadrada-cubica.c
+FileName=numero-potencia.c
 CompileCpp=0
 Folder=
 Compile=1
