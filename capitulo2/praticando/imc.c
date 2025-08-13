@@ -8,6 +8,7 @@ int main() {
 	scanf("%f", &peso);
 	printf("\nDigite sua altura em cm: ");
 	scanf("%f", &altura);
+	altura /= 100; //altura para metros 
 	printf("IMC = %.2f", peso / (altura * altura));
 	return 0;
 }
