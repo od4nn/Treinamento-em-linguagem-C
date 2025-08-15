@@ -21,6 +21,7 @@ A pasta "Aulas-ucb" é referente ao conteudo passado pelo professor, seja exerci
 - Arquivo `.c` com o código-fonte
 - Arquivo `.dev` com as configurações do projeto (caso queira abrir no Dev C++)
 - Os arquivos `.exe`, `.o`, `.layout`, etc., **não são enviados** para o GitHub (ver `.gitignore`)
+- Alguns arquivos ficaram com sufixo .cpp , não são codigos de c++ ! Foram apenas erros meus na hora de salvar o arquivo com sufixo c padrão kkkkk
 
 ## 🚀 Como compilar
 
