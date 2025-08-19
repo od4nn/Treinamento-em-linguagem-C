@@ -19,7 +19,8 @@ A pasta chamada "Praticando" é a pasta onde estou fazendo os exemplos do livros
 A pasta "Aulas-ucb" é referente ao conteudo passado pelo professor, seja exercicios ou conteudo passado na aula.
 
 - Arquivo `.c` com o código-fonte
-- Arquivo `.dev` com as configurações do projeto (caso queira abrir no Dev C++)
+- Arquivo `.dev` com as configurações do projeto (caso queira abrir no Dev C++) ATUALIZAÇÃO!
+(depois do capitulo 3 do livro deixei apenas arquivos com sufixo c)
 - Os arquivos `.exe`, `.o`, `.layout`, etc., **não são enviados** para o GitHub (ver `.gitignore`)
 - Alguns arquivos ficaram com sufixo .cpp , não são codigos de c++ ! Foram apenas erros meus na hora de salvar o arquivo com sufixo c padrão kkkkk
 
