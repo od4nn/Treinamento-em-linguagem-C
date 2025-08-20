@@ -27,6 +27,7 @@ int main() {
 		n2 = n3;
 		n3 = temp; //passa o menor valor para n2
 	}	
-	printf("%d, %d, %d\n", n1, n2, n3);
+	// no final, n1 = menor valor, n2 = valor do meio, n3 valor maior
+	printf("%d, %d, %d\n", n1, n2, n3); //ordem crescente
 	return 0;
 }
