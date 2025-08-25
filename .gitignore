@@ -1,11 +1,26 @@
+# Arquivos e pastas gerados pelo compilador
+# Ignora as pastas onde o Code::Blocks salva os arquivos compilados
+/bin/
+/obj/
+
+# Ignora executáveis e arquivos objeto que possam ser criados
 *.exe
 *.o
 *.obj
-*.layout
 *.res
-*.dep
+
+# Arquivos de configuração específicos do IDE que não precisam ser compartilhados
+# O layout é uma preferência pessoal de como as janelas estão organizadas
+*.layout
+
+# Arquivos de dependência gerados automaticamente
 *.depend
-*.win
+*.dep
+
+# Arquivos de projeto do Dev-C++ (para projetos antigos)
+*.dev
+
+# Arquivos de debug e outros gerados por diferentes compiladores
 *.ilk
 *.pdb
-*.dev
+*.win
