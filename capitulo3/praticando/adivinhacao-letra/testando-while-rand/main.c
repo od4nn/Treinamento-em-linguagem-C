@@ -6,10 +6,8 @@ int main()
     char resp = 's';
     int secreto;
     while(resp == 's'){
-
-        secreto = rand() % 26;
-        printf("\n\n%d\n", secreto);
-        printf("ir denovo?\n");
+        printf("\nvalor: %d\n divisao: %d\n", rand(), rand() % 26);
+        printf("\nir denovo?");
         scanf(" %c", &resp);
     }
     return 0;
