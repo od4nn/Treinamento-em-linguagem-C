@@ -20,6 +20,6 @@ int main()
         atual = proximo;
     }
 
-    printf("\n\n%d\n", proximo);
+    printf("\n\nO termo %d da sequencia e: %llf\n", n, atual);
     return 0;
 }
