@@ -3,6 +3,23 @@
 
 int main()
 {
-    printf("Hello world!\n");
+    int n;
+    long long int anterior = 1, atual = 1, proximo;
+
+    printf("Digite o numero termo da sequencia de fibonacci: ");
+    scanf("%d", &n);
+
+    if(n == 1 || n == 2){
+        printf("1");
+        return 0;
+    }
+
+    for(int i = 3; i <= n; i++){
+        proximo = anterior + atual;
+        anterior = atual;
+        atual = proximo;
+    }
+
+    printf("\n\n%d\n", proximo);
     return 0;
 }
