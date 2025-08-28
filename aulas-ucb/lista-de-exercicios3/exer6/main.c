@@ -6,7 +6,7 @@ long long int fatorial(int num);
 
 int main()
 {
-    double x, cosx, cosx_real, termo1, termo2, termo3;
+    double x, cosx, cosx_real, termo1, termo2, termo3; //variaveis
 
     printf("Informe o valor de x: ");
     scanf("%lf", &x);
