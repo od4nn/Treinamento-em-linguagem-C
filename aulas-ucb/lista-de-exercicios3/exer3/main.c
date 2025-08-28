@@ -26,7 +26,7 @@ int main()
         termos_mostrados++;
         i++;
     }
-    printf("...\n");
+    printf("...\n"); //espaçamento
 
     return 0;
 }
