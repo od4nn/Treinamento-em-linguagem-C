@@ -9,13 +9,16 @@ int main() {
 	int n_usuario, n_maior = 0, n_menor = 0, contador = 0;
 	
 	printf("Digite -1 para sair.\n");
+	
 	while(1){
 		do{
 			printf("\nInforme um numero positivo: ");
 			scanf("%d", &n_usuario);
+			
 			if(n_usuario == 0 || n_usuario < -1){ //feedback para o usuario
 				printf("Digite apenas numeros positivos maiores que 0!\n\n");
 			}	
+					
 		}while(n_usuario == 0 || n_usuario < -1); // impede que o usuario digite zero ou um numero negativo
 		
 		if(n_usuario == -1){ //sai do loop
