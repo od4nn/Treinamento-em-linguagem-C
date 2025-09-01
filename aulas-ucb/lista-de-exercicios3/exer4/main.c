@@ -5,7 +5,7 @@ long long int fatorial(int num);
 
 int main()
 {
-    int valor, valor_temp;
+    int valor, valor_temp, i;
 
     do{
         printf("Informe quantos valores voce deseja ler: ");
@@ -14,7 +14,7 @@ int main()
 
     printf("\n\n");
 
-    for(int i = 0; i < valor; i++){ // executa o valor que o usuario escolheu
+    for(i = 0; i < valor; i++){ // executa o valor que o usuario escolheu
         printf("Informe o %d- valor: ", i+1); //formatacao
         scanf("%d", &valor_temp); //variavel temporaria
         // usa a funcao em valor para pegar seu fatorial
@@ -26,9 +26,10 @@ int main()
 //funcao que calcula fatorial de um numero
 long long int fatorial(int num)
 {
+    int i;
     long long int fat = 1;
 
-    for(int i = num; i > 1; i--){
+    for(i = num; i > 1; i--){
         fat *= i;
     }
     return fat;
