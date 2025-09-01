@@ -3,11 +3,11 @@
 
 int main()
 {
-    int n_anterior = 0, n_atual = 1, n_novo;
+    int n_anterior = 0, n_atual = 1, n_novo, i;
 
-    for(int i = 0; i < 8; i++){
+    for(i = 0; i < 8; i++){
         printf("%d", n_anterior);
-        if(i < 7){ //so perfumando o codigo
+        if(i < 7){ //apenas um detalhe
             printf(", "); //mostra uma virgula toda vez apos cada numero, exceto no ultimo numero
         }
         n_novo = n_atual + n_anterior;
