@@ -11,6 +11,7 @@ Faça um programa que determine o salário atual desse funcionário.*/
 int main()
 {
     //primeiro salario
+    int i;
     float salario_2005 = 1000.0;
     float salario_2006, salario_2025;
     // definindo a primeira porcentagem
@@ -18,7 +19,7 @@ int main()
     salario_2006 = salario_2005 * 1.015; //calculando o salario de 2006 com base na porcentagem
     float salario_atual = salario_2006; //dando um valor inicial para salario_atual
 
-    for(int i = 2007; i <= 2025; i++){
+    for(i = 2007; i <= 2025; i++){
         porcent *= 2; //dobrando a porcentagem a cada looping
         calcul_porcent = salario_atual * porcent; //pega cada aumento em dinheiro de cada ano
         salario_atual += calcul_porcent; //soma o aumento ao salario mais recente
