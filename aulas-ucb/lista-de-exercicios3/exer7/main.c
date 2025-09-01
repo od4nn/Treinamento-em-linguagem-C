@@ -5,10 +5,11 @@
 int main()
 {
     double k = 1.0, n;
+    int i;
     printf("Informe o valor de n: ");
     scanf("%lf", &n);
 
-    for(int i = 0; i < 12; i++){
+    for(i = 0; i < 12; i++){
         k = (k + (n / k)) / 2; //formula de calculo de raiz quadrada
         printf("\nA raiz quadrada de n no loop %d e: %lf", i + 1, k);
     }
