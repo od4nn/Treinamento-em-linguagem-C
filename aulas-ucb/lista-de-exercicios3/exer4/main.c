@@ -1,11 +1,13 @@
 #include <stdio.h>
 #include <stdlib.h>
 
-long long int fatorial(int num);
+/*Faça um programa que leia um número inteiro N e que indique quantos valores inteiros e
+positivos devem ser lidos a seguir. Para cada número lido, mostre uma tabela contendo o valor
+lido e o fatorial desse valor. */
 
 int main()
 {
-    int valor, valor_temp, i;
+    int valor, valor_temp, i, j;
 
     do{
         printf("Informe quantos valores voce deseja ler: ");
@@ -17,21 +19,12 @@ int main()
     for(i = 0; i < valor; i++){ // executa o valor que o usuario escolheu
         printf("Informe o %d- valor: ", i+1); //formatacao
         scanf("%d", &valor_temp); //variavel temporaria
-        // usa a funcao em valor para pegar seu fatorial
-        printf("%d- Valor. \t Fatorial: %lld\n\n", i + 1, fatorial(valor_temp)); //mostra o resultado imediatamente
+        long long int fat = 1;
+        for(j = valor_temp; j > 1; j--){ //calcula fatorial de um numero
+            fat *= j;
+        }
+        printf("%d- Valor. \t Fatorial: %lld\n\n", i + 1, fat); //mostra o resultado imediatamente
         //quando o looping acaba, os valores saem do escopo de for e somem, entao cada variavel pode ter um novo valor novamente
     }
     return 0;
 }
-//funcao que calcula fatorial de um numero
-long long int fatorial(int num)
-{
-    int i;
-    long long int fat = 1;
-
-    for(i = num; i > 1; i--){
-        fat *= i;
-    }
-    return fat;
-}
-
