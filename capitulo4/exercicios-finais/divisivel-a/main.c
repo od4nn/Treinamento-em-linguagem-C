@@ -8,7 +8,7 @@ int main()
     printf("Informe o valor de a: ");
     scanf("%d", &a);
 
-    if(a <= 1){
+    if(a <= 1){ //impede que seja menor ou igual a 1
         printf("\na deve ser maior que 1.");
         return 1;
     }
@@ -18,7 +18,7 @@ int main()
     printf("\nInforme o valor de c: ");
     scanf("%d", &c);
 
-    if(b < c){ //b sera o maior
+    if(b < c){ //garante que b sempre seja maior
         temp = b;
         b = c;
         c = temp;
