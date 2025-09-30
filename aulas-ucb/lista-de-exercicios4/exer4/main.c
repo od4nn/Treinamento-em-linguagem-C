@@ -9,7 +9,7 @@ void calculo_tempo(int segundos)
     minutos = segundos % 3600; //pega os minutos
     aux = minutos; //guarda valor de minutos
     minutos = minutos / 60;
-    segundos = (aux % 60) % 60;
+    segundos = aux % 60;
     printf("O valor em horas eh: %d\nEm minutos eh: %d\nEm segundos eh: %d\n", horas, minutos, segundos);
 }
 
@@ -20,6 +20,6 @@ int main()
     printf("Informe o valor em segundos: ");
     scanf("%d", &segundos_u);
     calculo_tempo(segundos_u); //chama funcao
-
+    printf("%d", segundos_u);
     return 0;
 }
