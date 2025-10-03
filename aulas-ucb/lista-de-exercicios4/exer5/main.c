@@ -24,5 +24,7 @@ int main()
 
     v_final = calcula_porc(valor_a, valor_n);
     printf("A diferenca entre o valor inicial e final eh: %.2f", v_final);
+    printf("cls");
+
     return 0;
 }
