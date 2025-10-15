@@ -11,6 +11,7 @@ void calcula_soma(int X[], int Y[], int soma[]);
 void calcula_produto(int X[], int Y[], int produto[]);
 void calcula_dif(int X[], int Y[], int diferenca[]);
 void calcula_inter(int X[], int Y[], int inter[]);
+int ja_existe(int numero, int vetor[], int index);
 
 /*Faça um programa que preencha dois vetores, X e Y, com dez números inteiros cada.
 Calcule e mostre os seguintes vetores resultantes: - A união de X com Y (Todos os
@@ -50,40 +51,62 @@ void preenche_vetor(int vetor[])
 
 void calcula_uniao(int X[], int Y[], int uniao[])
 {
-    int i, j;
+    int i, j, cont_uniao = 0;
     printf("\n\nVALORES DO VETOR 3:");
-    for(i= 0; i < TAMANHO; i++){ //primeiro vetor
-        uniao[i] = X[i];
+    for(i= 0; i < TAMANHO; i++){ //primeiro veto
+        if(ja_existe(X[i], uniao, cont_uniao)== 0){ // manda o numero atual, o vetor responsavel por armazenar os numeros, e o tamanho do vetor
+            uniao[cont_uniao] = X[i]; //se for adicionar numero atual na posição atual do vetor
+            cont_uniao++; //incrementa
+        }
+
     }
     for(j = 0; j < TAMANHO; j++){ //segundo vetor
-        uniao[i] = Y[j];
-        i++;
+        if(ja_existe(Y[j], uniao, cont_uniao)== 0){
+            uniao[cont_uniao] = Y[j];
+            cont_uniao++;
+        }
     }
 
     printf("\t---------UNIAO DE X E Y---------\n");
-    for(i = 0; i < TAMANHO_DOBRO; i++){ //mostra
+    for(i = 0; i < cont_uniao; i++){ //mostra os numeros ate o limite do vetor
         printf("\nPosicao %d.: %d", i+1, uniao[i]);
     }
 
 }
 
+int ja_existe(int numero, int vetor[], int index)
+{
+    int i;
+    for(i = 0; i < index; i++){ //vai da posição 0 ate o index, se for o primeiro numero, ele nem roda, pois i < 0 falso
+        if(vetor[i] == numero){ //"o numero analisado ja existe no vetor?"
+            return 1; //sim? entao nao adiciona ele
+        }
+    }
+    return 0; //nao? adiciona
+}
+
 void calcula_dif(int X[], int Y[], int diferenca[])
 {
-    int i, j, z, cont = 1, ind = 0;
+    int i, j, z, cont = 0, ind = 0;
+    //procura os elementos que so existem em X
     for(i = 0; i < TAMANHO; i++){ //fixa um numero de x
         cont = 0;
         for(j = 0; j < TAMANHO; j++){ //confere todos de y
-            if(X[i] != Y[j]){
-                cont++; //Se for so UMA vez, ai sim poem no vetor
+            if(X[i] == Y[j]){ //confere se o numero fixado existe em Y
+                cont++; // se sim adiciona no contador
+                break; //otimizacao. para a verificacao, a gente precisa que o contador seja apenas maior que zero para ser falso
             }
         }
-        if(cont == TAMANHO){
-            diferenca[ind] = X[i]; //se for, adiciona a diferenca
-            ind++; //index para pegar do vetor 0 sem buracos
+        if(cont == 0){ //se nao, faz a verificacao de repetição
+            if(ja_existe(X[i], diferenca, ind)== 0){ //"esse elemento que so existe em X, ja existe em alguma outra posicao de diferenca[]?"
+                diferenca[ind] = X[i]; //se nao existe, adiciona novo numero em diferenca[]
+                ind++; //index para pegar do vetor 0 sem buracos
+            }
+
         }
     }
     printf("\n\t---------DIFERENCA DE X E Y---------\n");
-    for(i = 0; i < TAMANHO; i++){ //mostra
+    for(i = 0; i < ind; i++){ //mostra
         printf("\nPosicao %d.: %d", i+1, diferenca[i]);
     }
 }
@@ -118,23 +141,24 @@ void calcula_produto(int X[], int Y[], int produto[])
 
 void calcula_inter(int X[], int Y[], int inter[])
 {
-    int i, j, z, cont = 1, ind = 0;
+    int i, j, z, cont = 0, ind = 0;
     for(i = 0; i < TAMANHO; i++){ //fixa um numero de x
         cont = 0; //zera o contador para o proximo loop
         for(j = 0; j < TAMANHO; j++){ //confere todos de y
-            if(X[i] != Y[j]){ //verificacao, conta quantas vezes esse numero aparece em Y
+            if(X[i] == Y[j]){ //verificacao, conta quantas vezes esse numero aparece em Y
                 cont++;
+                break; //para otimizacao, so precisamos ter ctz que seja maior que 0
             }
         }
-        //Se for TODAS as vez, ai sim poem no vetor
-        if(cont == TAMANHO){
-            inter[ind] = X[i]; //adiciona no inter
-            ind++; //index para pegar do vetor 0 sem buracos
-            break;
+        if(cont > 0){
+            if (ja_existe(X[i], inter, ind)== 0){ //manda o numero atual, o vetor e o index
+                inter[ind] = X[i]; //adiciona no inter
+                ind++; //index para pegar do vetor 0 sem buracos
+            }
         }
     }
     printf("\n\t---------INTERSECAO DE X E Y---------\n");
-    for(i = 0; i < TAMANHO; i++){ //mostra
-        printf("\nPosição %d.: %d", i+1, inter[i]);
+    for(i = 0; i < ind; i++){ //mostra
+        printf("\nPosicao %d.: %d", i+1, inter[i]);
     }
 }
