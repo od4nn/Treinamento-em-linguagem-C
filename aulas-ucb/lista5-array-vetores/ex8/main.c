@@ -30,7 +30,7 @@ void preenche_vetor(int vetor[], int vetor_cres[])
         scanf("%d", &vetor[i]);
         vetor_cres[i] = vetor[i];
         if(i > 1)
-            ordena(vetor_cres, i+1);
+            ordena(vetor_cres, i+1); //+1 para garantir que pegue todos os numeros
     }
 }
 
@@ -38,7 +38,7 @@ void ordena(int vetor_cres[], int ind)
 {
     int i, j, temp;
     //bubble sort
-    for(i = 0; i < ind; i++){
+    for(i = 0; i < ind; i++){ //nao tem o -1 porque precisamos verificar todas as vezes pois o valor de ind nao é fixo e muda
         for(j = 0; j < ind - 1 - i; j++){
             if(vetor_cres[j] > vetor_cres[j+1]){
                 temp = vetor_cres[j];
