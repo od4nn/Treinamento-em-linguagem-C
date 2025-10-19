@@ -1,0 +1,66 @@
+#include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
+
+#define N_CARROS 5
+#define NOME_MAX 15
+
+/* Faça um programa que preencha um vetor com os modelos de cinco carros (Exemplo de
+modelos: Corsa, Gol,Palio, Sandero, etc.) Carregue outro vetor com o consumo destes carros,
+isto é, quantos quilômetros cada um deles faz com um litro de combustível, calcule e mostre: -
+O modelo de carro mais econômico; - Quantos litros de combustível cada um dos carros
+cadastrados consome para percorrer uma distância de 1.000 quilômetros.*/
+
+void informa_consumo(float consumo[], char carro[][NOME_MAX]);
+void preenche_vetor(char vetor[][NOME_MAX]);
+void mais_economico(float consumo[], char carro[][NOME_MAX], char carro_m_economico[][NOME_MAX]);
+
+int main()
+{
+    char vetor_carro[N_CARROS][NOME_MAX], carro_m_economico[1][NOME_MAX];
+    float consumo[N_CARROS];
+
+    printf("\t---------Informe o modelo dos carros---------");
+    preenche_vetor(vetor_carro);
+    printf("\t---------Informe o consumo dos carros(km por litfucro)---------");
+    informa_consumo(consumo, vetor_carro);
+    mais_economico(consumo, vetor_carro, carro_m_economico);
+
+    return 0;
+}
+
+void preenche_vetor(char vetor[][NOME_MAX])
+{
+    int i;
+    for(i = 0; i < N_CARROS; i++){
+        printf("\nInforme o %d. carro: ", i + 1);
+        scanf("%s", vetor[i]); //char e strings nao precisam do &
+    }
+}
+
+void informa_consumo(float consumo[], char carro[][NOME_MAX])
+{
+    int i;
+    for(i = 0; i < N_CARROS; i++){
+        printf("\nInforme o consumo do %s: ", carro[i]);
+        scanf("%f", &consumo[i]);
+    }
+}
+
+void mais_economico(float consumo[], char carro[][NOME_MAX], char carro_m_economico[][NOME_MAX])
+{
+    strcpy(carro_m_economico[0], carro[0]);
+    int i;
+    for(i = 1; i < N_CARROS; i++){
+        if(consumo[i] > consumo[0]){
+            strcpy(carro_m_economico[0], carro[i]);
+        }
+    }
+
+    printf("\n\n---------------------");
+    printf("\nO carro mais economico eh o %s.\n", carro_m_economico[0]);
+
+    for(i = 0; i < N_CARROS; i++){
+        printf("\nO modelo %s consome %.2f litros para percorrer 1000km.", carro[i], 1000 / consumo[i]);
+    }
+}
