@@ -19,7 +19,6 @@ int main(){
     preenche_vetor(matriz);
     calcula_soma(matriz, soma);
     troca_numero(matriz, soma);
-    //comentando para ver se muda
     return 0;
 }
 
