@@ -4,9 +4,9 @@
 #define TAMANHO 5
 #define TAMANHO_DOBRO 10
 
-/*Faça um programa que preencha dois vetores com cinco elementos numéricos cada e depois
-ordene-os de maneira crescente. Deverá ser gerado um terceiro vetor com dez posições,
-composto pela junção dos elementos dos vetores anteriores, também ordenado de maneira
+/*Faï¿½a um programa que preencha dois vetores com cinco elementos numï¿½ricos cada e depois
+ordene-os de maneira crescente. Deverï¿½ ser gerado um terceiro vetor com dez posiÃ§Ãµes,
+composto pela junï¿½ï¿½o dos elementos dos vetores anteriores, tambï¿½m ordenado de maneira
 crescente.*/
 
 void preenche_vetor(int vetor[]);
@@ -47,7 +47,7 @@ void calcula_uniao(int X[], int Y[], int uniao[])
 {
     int i, j, cont_uniao = 0;
     for(i= 0; i < TAMANHO; i++){ //primeiro vetor
-            uniao[cont_uniao] = X[i]; //se for adicionar numero atual na posição atual do vetor
+            uniao[cont_uniao] = X[i]; //se for adicionar numero atual na posiï¿½ï¿½o atual do vetor
             cont_uniao++; //incrementa
     }
     for(j = 0; j < TAMANHO; j++){ //segundo vetor
