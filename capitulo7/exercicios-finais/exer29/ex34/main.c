@@ -24,3 +24,6 @@ void inverte(char palavra[], int tamanho)
         printf("%c", palavra[i]);
     }
 }
+
+
+//oioi

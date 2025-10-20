@@ -5,11 +5,11 @@
 #define N_CARROS 5
 #define NOME_MAX 15
 
-/* Faça um programa que preencha um vetor com os modelos de cinco carros (Exemplo de
+/* Faï¿½a um programa que preencha um vetor com os modelos de cinco carros (Exemplo de
 modelos: Corsa, Gol,Palio, Sandero, etc.) Carregue outro vetor com o consumo destes carros,
-isto é, quantos quilômetros cada um deles faz com um litro de combustível, calcule e mostre: -
-O modelo de carro mais econômico; - Quantos litros de combustível cada um dos carros
-cadastrados consome para percorrer uma distância de 1.000 quilômetros.*/
+isto ï¿½, quantos quilï¿½metros cada um deles faz com um litro de combustï¿½vel, calcule e mostre: -
+O modelo de carro mais econï¿½mico; - Quantos litros de combustï¿½vel cada um dos carros
+cadastrados consome para percorrer uma distï¿½ncia de 1.000 quilï¿½metros.*/
 
 void informa_consumo(float consumo[], char carro[][NOME_MAX]);
 void preenche_vetor(char vetor[][NOME_MAX]);
@@ -66,3 +66,7 @@ void mais_economico(float consumo[], char carro[][NOME_MAX])
         printf("\nO modelo %s consome %.2f litros para percorrer 1000km.", carro[i], 1000.0 / consumo[i]);
     }
 }
+
+//topzera ;)
+
+//louco demais
