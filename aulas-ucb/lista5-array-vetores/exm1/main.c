@@ -34,27 +34,17 @@ void preenche_vetor(int matriz[][4]) {
             for (j = 0; j < 4; j++) {
 
                 matriz[i][j] = rand() % 100;
-
             }
-
         }
-
     }
 
     else {
-
         for (i = 0; i < 3; i++) {
-
             for (j = 0; j < 4; j++) {
-
                 printf("Escolha o numero da linha %d, posicao %d: ", i+1, j+1);
-
                 scanf("%d", &matriz[i][j]);
-
             }
-
         }
-
     }
 
     for (i = 0; i < 3; i++) {
