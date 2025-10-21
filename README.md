@@ -1,50 +1,53 @@
 # Estudos em Linguagem C 🧠💻
 
-Este repositório contém meus exercícios e anotações enquanto estudo a linguagem C, como parte da minha formação em engenharia de software.
+Este repositório contém meus exercícios e anotações enquanto estudo a linguagem C, como parte da minha formação em Engenharia de Software.
 
 ## 📚 Material Base
 
-Estou usando o livro **"Treinamento em Linguagem C" (Segunda Edição)** como principal fonte de aprendizado. Nele, sigo os exercícios capítulo por capítulo, reforçando tanto a prática quanto a teoria.
+Estou utilizando o livro **"Treinamento em Linguagem C" (Segunda Edição)** como principal fonte de aprendizado.  
+Nele, sigo os exercícios capítulo por capítulo, reforçando tanto a prática quanto a teoria.
 
 ## 🛠️ Ferramentas Utilizadas
 
-- **IDE Principal:** **Code::Blocks** (com compilador MinGW-GCC)
-- **Depurador:** **GDB**, integrado ao Code::Blocks, para análise passo a passo do código.
-- **IDE Anterior:** Dev-C++ (utilizado no início dos estudos)
+- **IDE Principal:** **CLion** (com compilador MinGW-GCC)
+- **Depurador:** **GDB**, integrado ao CLion, para análise passo a passo do código.
+- **IDE Anterior:** Code::Blocks e Dev-C++ (utilizados no início dos estudos)
 - **Sistema Operacional:** Windows
-- **Compilador:** GCC
+- **Compilador:** GCC (via MinGW)
 
 ## 🧪 Organização dos Projetos
 
-Com a mudança para o Code::Blocks, cada projeto é criado em sua própria pasta, mantendo o código-fonte separado dos arquivos gerados pelo compilador.
-
-A pasta "Praticando" contém os exemplos do livro, por vezes com variações. A pasta "Aulas-ucb" é referente ao conteúdo da faculdade.
+Cada exercício é armazenado em sua própria pasta, nomeada conforme o conteúdo ou o número do exercício.  
+Dentro de cada pasta há um único arquivo principal — normalmente chamado `main.c`.
 
 - **Arquivos mantidos no repositório:**
-    - `*.c` e `*.h` com o código-fonte.
-    - `*.cbp` com as configurações do projeto para o Code::Blocks.
+  - `*.c` → código-fonte.
+  - `CMakeLists.txt` → configuração do projeto para o CLion.
 - **Arquivos e pastas ignorados (ver `.gitignore`):**
-    - As pastas `bin/` (executável final) e `obj/` (arquivos-objeto).
-    - Arquivos de layout (`*.layout`), dependências e executáveis (`*.exe`).
-- **Observação:** Alguns arquivos antigos podem ter o sufixo `.cpp`, um erro meu ao salvar no início. O código dentro deles ainda é C!
+  - Pastas de build (`cmake-build-debug/`, `cmake-build-release/` etc.).
+  - Arquivos temporários, de cache e executáveis (`*.exe`, `*.obj`, `*.o`).
+- **Observação:** Alguns arquivos antigos podem ter o sufixo `.cpp`.  
+  Isso ocorreu por engano nas primeiras práticas — o conteúdo ainda é código em C.
 
 ## 🚀 Como Compilar e Executar
 
 Se quiser compilar os programas no seu computador:
 
-1.  Instale o [Code::Blocks](https://www.codeblocks.org/downloads/).
-2.  Abra o arquivo do projeto (`.cbp`) correspondente.
-3.  Compile e execute com a tecla **F9** (ou clique no ícone "Build and run").
+1. Instale CLion (ou qualquer outra IDE que compile e rode programas em C): https://www.jetbrains.com/clion/
+2. Abra a pasta do projeto diretamente no CLion.
+3. Clique em **Build** → **Build Project** (ou use **Ctrl + F9**).
+4. Para executar, pressione **Shift + F10** ou clique no ícone de execução.
 
 ## 🎯 Meus Objetivos
 
 Meu foco com este repositório é:
 
-- Reforçar a lógica de programação e a resolução de problemas.
-- Compreender profundamente os fundamentos da linguagem C.
-- Dominar ferramentas de desenvolvimento essenciais, como o **depurador (debugger)**.
-- Me preparar para cursos mais avançados, como o CS50 e estruturas de dados.
+- Reforçar a lógica de programação e a resolução de problemas.  
+- Compreender profundamente os fundamentos da linguagem C.  
+- Dominar ferramentas de desenvolvimento, especialmente o **depurador (debugger)**.  
+- Me preparar para cursos mais avançados, como o **CS50** e **Estruturas de Dados**.
 
 ---
 
-📌 **Obs:** Este repositório é voltado para fins de estudo. Estou focando mais em escrever código que funcione e menos em otimizações avançadas por enquanto.
+📌 **Obs:** Este repositório é voltado exclusivamente para fins de estudo.  
+O foco atual é **escrever código funcional e compreensível**, deixando otimizações e boas práticas avançadas para fases posteriores.
