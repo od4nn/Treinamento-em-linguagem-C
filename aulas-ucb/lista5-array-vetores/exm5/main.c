@@ -100,3 +100,5 @@ void mostra_matriz(int matriz[][TAMANHO]) {
         printf("]\n");
     }
 }
+
+//colocando comentario para verificar o uso do git
