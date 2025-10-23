@@ -1,5 +1,4 @@
 #include <stdio.h>
-#include <string.h>
 
 int main() {
     typedef struct {
@@ -8,11 +7,11 @@ int main() {
         double nota;
     }Aluno;
 
-    Aluno pablo, marta, joao;
+    Aluno pablo = {15, "Pablo", 8.0};
+    Aluno marta = {30, "Marta", 9.0};
+    Aluno Pedro = pablo;
 
-    pablo.idade = 15;
-    strcpy(pablo.nome, "Pablo");
-    pablo.nota = 8.0;
-
-    printf("Nome: %s\nNota: %.2f\nIdade: %d", pablo.nome, pablo.nota, pablo.idade);
+    printf("Nome: %s\nNota: %.2f\nIdade: %d\n", pablo.nome, pablo.nota, pablo.idade);
+    printf("Nome: %s\nNota: %.2f\nIdade: %d\n", marta.nome, marta.nota, marta.idade);
+    printf("Nome: %s\nNota: %.2f\n", Pedro.nome, Pedro.nota);
 }
