@@ -22,6 +22,8 @@ int main() {
     total = calcula_venda(a, b);
 
     printf("Total: %.2f", total);
+    printf("\nVenda A: %s", a.data_venda);
+    printf("\nVenda B: %s", b.data_venda);
 
 }
 
