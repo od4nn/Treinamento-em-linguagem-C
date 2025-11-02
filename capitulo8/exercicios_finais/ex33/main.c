@@ -12,7 +12,7 @@ typedef struct {
 
 Mes calendario[12] = {
     {"Janeiro", "JAN", 31, 1},
-    {"Fevereiro", "Fev", 28, 2},
+    {"Fevereiro", "FEV", 28, 2},
     {"Marco", "MAR", 31, 3},
     { "Abril", "ABR", 30, 4 },
     { "Maio", "MAI", 31, 5 },
